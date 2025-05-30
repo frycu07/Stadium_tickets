@@ -15,4 +15,10 @@ public interface UserService {
     Optional<User> findByEmail(String email);
     boolean existsByUsername(String username);
     boolean existsByEmail(String email);
+
+    // Role management methods
+    User addUserRole(Long userId);
+    User addAdminRole(Long userId);
+    User removeUserRole(Long userId);
+    User removeAdminRole(Long userId);
 }

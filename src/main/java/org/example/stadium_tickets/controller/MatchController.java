@@ -42,8 +42,7 @@ public class MatchController {
     public ResponseEntity<Match> createMatch(
             @Parameter(description = "Match details", required = true)
             @RequestBody Match match) {
-        matches.add(match);
-        return ResponseEntity.ok(match);
+        return ResponseEntity.ok(matchService.createMatch(match));
     }
 
     @PutMapping("/{id}")
@@ -53,8 +52,7 @@ public class MatchController {
             @PathVariable Long id,
             @Parameter(description = "Updated match details", required = true)
             @RequestBody Match match) {
-        // In a real application, this would update the database
-        return ResponseEntity.ok(match);
+        return ResponseEntity.ok(matchService.updateMatch(id, match));
     }
 
     @DeleteMapping("/{id}")
@@ -62,7 +60,7 @@ public class MatchController {
     public ResponseEntity<Void> deleteMatch(
             @Parameter(description = "ID of the match to delete", required = true)
             @PathVariable Long id) {
-        // In a real application, this would delete from the database
+        matchService.deleteMatch(id);
         return ResponseEntity.noContent().build();
     }
 }

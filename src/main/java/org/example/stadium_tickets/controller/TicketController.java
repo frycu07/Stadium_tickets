@@ -9,8 +9,10 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import org.example.stadium_tickets.entity.Ticket;
+import org.example.stadium_tickets.service.TicketService;
+import org.example.stadium_tickets.service.MatchService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +24,14 @@ import java.util.List;
 @Tag(name = "Ticket Management", description = "APIs for managing stadium tickets")
 public class TicketController {
 
-    private final List<Ticket> tickets = new ArrayList<>();
+    private final TicketService ticketService;
+    private final MatchService matchService;
+
+    @Autowired
+    public TicketController(TicketService ticketService, MatchService matchService) {
+        this.ticketService = ticketService;
+        this.matchService = matchService;
+    }
 
     @GetMapping
     @Operation(
@@ -46,7 +55,7 @@ public class TicketController {
         )
     })
     public ResponseEntity<List<Ticket>> getAllTickets() {
-        return ResponseEntity.ok(tickets);
+        return ResponseEntity.ok(ticketService.getAllTickets());
     }
 
     @GetMapping("/{id}")
@@ -69,8 +78,7 @@ public class TicketController {
     public ResponseEntity<Ticket> getTicketById(
             @Parameter(description = "ID of the ticket to retrieve", required = true, example = "1")
             @PathVariable Long id) {
-        // In a real application, this would search the database
-        return ResponseEntity.ok(new Ticket());
+        return ResponseEntity.ok(ticketService.getTicketById(id));
     }
 
     @GetMapping("/match/{matchId}")
@@ -81,40 +89,19 @@ public class TicketController {
     public ResponseEntity<List<Ticket>> getTicketsByMatchId(
             @Parameter(description = "ID of the match", required = true, example = "1")
             @PathVariable Long matchId) {
-        // In a real application, this would search the database
-        return ResponseEntity.ok(new ArrayList<>());
+        return ResponseEntity.ok(ticketService.findByMatch(matchService.getMatchById(matchId)));
     }
 
-    @GetMapping("/user/{userId}")
-    @Operation(
-        summary = "Get tickets by user ID", 
-        description = "Retrieves all tickets purchased by a specific user",
-        security = { @SecurityRequirement(name = "bearer-key") }
-    )
-    public ResponseEntity<List<Ticket>> getTicketsByUserId(
-            @Parameter(description = "ID of the user", required = true, example = "1")
-            @PathVariable Long userId) {
-        // In a real application, this would search the database
-        return ResponseEntity.ok(new ArrayList<>());
-    }
+
 
     @PostMapping
     @Operation(
         summary = "Purchase a ticket", 
         description = "Purchases a new ticket for a match"
     )
-    @io.swagger.v3.oas.annotations.parameters.RequestBody(
-        description = "Ticket details for purchase",
-        required = true,
-        content = @Content(
-            mediaType = "application/json",
-            schema = @Schema(implementation = Ticket.class)
-        )
-    )
     public ResponseEntity<Ticket> purchaseTicket(
-            @org.springframework.web.bind.annotation.RequestBody Ticket ticket) {
-        tickets.add(ticket);
-        return ResponseEntity.ok(ticket);
+            @RequestBody Ticket ticket) {
+        return ResponseEntity.ok(ticketService.createTicket(ticket));
     }
 
     @DeleteMapping("/{id}")
@@ -126,7 +113,7 @@ public class TicketController {
     public ResponseEntity<Void> cancelTicket(
             @Parameter(description = "ID of the ticket to cancel", required = true)
             @PathVariable Long id) {
-        // In a real application, this would delete from the database
+        ticketService.cancelTicket(id);
         return ResponseEntity.noContent().build();
     }
 }

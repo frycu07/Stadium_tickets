@@ -1,0 +1,115 @@
+@startuml Stadium Tickets ERD
+
+' Style settings
+!define ENTITY_BG_COLOR #E2F0D9
+!define ENTITY_BORDER_COLOR #82B366
+!define TITLE_BG_COLOR #D5E8D4
+!define TITLE_FONT_COLOR #333333
+
+skinparam class {
+    BackgroundColor ENTITY_BG_COLOR
+    BorderColor ENTITY_BORDER_COLOR
+    ArrowColor #666666
+    FontName Arial
+    TitleBackgroundColor TITLE_BG_COLOR
+    TitleFontColor TITLE_FONT_COLOR
+}
+
+skinparam note {
+    BackgroundColor #FFF2CC
+    BorderColor #D6B656
+}
+
+title "Stadium Tickets System - Entity Relationship Diagram"
+
+' Entity definitions with attributes
+entity "Stadium" as stadium {
+  *id : Long <<PK>>
+  --
+  *name : String
+  *city : String
+  *capacity : Integer
+}
+
+entity "Match" as match {
+  *id : Long <<PK>>
+  --
+  *homeTeam : String
+  *awayTeam : String
+  *matchDate : LocalDateTime
+  *stadium_id : Long <<FK>>
+}
+
+entity "Ticket" as ticket {
+  *id : Long <<PK>>
+  --
+  *match_id : Long <<FK>>
+  seatRow : String
+  seatNumber : String
+  *price : BigDecimal
+  *status : String = "FREE"
+}
+
+entity "User" as user {
+  *id : Long <<PK>>
+  --
+  *username : String <<unique>>
+  *password : String
+  *email : String <<unique>>
+  *createdAt : LocalDateTime
+}
+
+entity "Role" as role {
+  *id : Long <<PK>>
+  --
+  *name : String <<unique>>
+}
+
+' Junction table for many-to-many relationship
+entity "user_roles" as user_role {
+  *user_id : Long <<FK>>
+  *role_id : Long <<FK>>
+}
+
+' Relationships with cardinality
+stadium ||--o{ match : "hosts"
+note on link
+  One stadium can host
+  many matches
+end note
+
+match ||--o{ ticket : "has"
+note on link
+  One match can have
+  many tickets
+end note
+
+user }|--|| user_role : "has"
+user_role ||--|{ role : "assigns"
+
+note bottom of stadium
+  Represents a physical stadium
+  with a fixed capacity
+end note
+
+note bottom of match
+  Represents a sporting event
+  between two teams
+end note
+
+note bottom of ticket
+  Represents a ticket for a specific
+  seat at a specific match
+end note
+
+note bottom of user
+  Represents a system user
+  with authentication details
+end note
+
+note bottom of role
+  Represents user permissions
+  (e.g., ADMIN, USER)
+end note
+
+@enduml

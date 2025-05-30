@@ -78,3 +78,16 @@ The application uses the following tables:
 - `match`: Stores information about football matches
 - `ticket`: Stores information about tickets for matches
 - `users` and `roles`: Stores user authentication and authorization information
+
+### Entity Relationship Diagram (ERD)
+
+An Entity Relationship Diagram (ERD) is available to visualize the database schema and relationships between entities. The ERD is created using PlantUML and can be found at:
+
+- PlantUML file: `src/main/resources/erd_diagram.puml`
+- Documentation: `src/main/resources/ERD_README.md`
+
+To view the ERD diagram:
+
+1. Open the PlantUML file in an IDE with PlantUML plugin (IntelliJ IDEA, VS Code)
+2. Use the online PlantUML server: [PlantUML Online Server](https://www.plantuml.com/plantuml/uml/)
+3. See the `ERD_README.md` file for more detailed instructions

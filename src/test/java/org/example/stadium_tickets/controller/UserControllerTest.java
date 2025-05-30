@@ -1,12 +1,18 @@
 package org.example.stadium_tickets.controller;
 
 import org.example.stadium_tickets.entity.User;
+import org.example.stadium_tickets.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,10 +21,20 @@ class UserControllerTest {
     private UserController userController;
     private User testUser;
 
+    @Mock
+    private UserService userService;
+
     @BeforeEach
     void setUp() {
-        userController = new UserController();
+        MockitoAnnotations.openMocks(this);
+        userController = new UserController(userService);
         testUser = new User("testuser", "password123", "test@example.com");
+
+        // Setup mock behavior
+        when(userService.getAllUsers()).thenReturn(new ArrayList<>());
+        when(userService.getUserById(anyLong())).thenReturn(testUser);
+        when(userService.createUser(any(User.class))).thenReturn(testUser);
+        when(userService.updateUser(anyLong(), any(User.class))).thenReturn(testUser);
     }
 
     @Test
@@ -30,7 +46,10 @@ class UserControllerTest {
         assertTrue(response.getBody().isEmpty());
 
         // Add a user and check if it's returned
-        userController.createUser(testUser);
+        List<User> userList = new ArrayList<>();
+        userList.add(testUser);
+        when(userService.getAllUsers()).thenReturn(userList);
+
         response = userController.getAllUsers();
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
@@ -51,8 +70,12 @@ class UserControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertEquals(testUser, response.getBody());
-        
+
         // Verify the user was added to the list
+        List<User> userList = new ArrayList<>();
+        userList.add(testUser);
+        when(userService.getAllUsers()).thenReturn(userList);
+
         ResponseEntity<List<User>> allUsers = userController.getAllUsers();
         assertEquals(1, allUsers.getBody().size());
         assertEquals(testUser, allUsers.getBody().get(0));

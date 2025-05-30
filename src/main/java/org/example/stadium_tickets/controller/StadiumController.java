@@ -8,10 +8,11 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.example.stadium_tickets.entity.Stadium;
+import org.example.stadium_tickets.service.StadiumService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -19,7 +20,12 @@ import java.util.List;
 @Tag(name = "Stadium Management", description = "APIs for managing stadiums")
 public class StadiumController {
 
-    private final List<Stadium> stadiums = new ArrayList<>();
+    private final StadiumService stadiumService;
+
+    @Autowired
+    public StadiumController(StadiumService stadiumService) {
+        this.stadiumService = stadiumService;
+    }
 
     @GetMapping
     @Operation(
@@ -35,7 +41,7 @@ public class StadiumController {
         @ApiResponse(responseCode = "404", description = "No stadiums found")
     })
     public ResponseEntity<List<Stadium>> getAllStadiums() {
-        return ResponseEntity.ok(stadiums);
+        return ResponseEntity.ok(stadiumService.getAllStadiums());
     }
 
     @GetMapping("/{id}")
@@ -50,8 +56,7 @@ public class StadiumController {
     public ResponseEntity<Stadium> getStadiumById(
             @Parameter(description = "ID of the stadium to retrieve", required = true, example = "1")
             @PathVariable Long id) {
-        // In a real application, this would search the database
-        return ResponseEntity.ok(new Stadium());
+        return ResponseEntity.ok(stadiumService.getStadiumById(id));
     }
 
     @PostMapping
@@ -62,8 +67,7 @@ public class StadiumController {
     public ResponseEntity<Stadium> createStadium(
             @Parameter(description = "Stadium details", required = true)
             @RequestBody Stadium stadium) {
-        stadiums.add(stadium);
-        return ResponseEntity.ok(stadium);
+        return ResponseEntity.ok(stadiumService.createStadium(stadium));
     }
 
     @PutMapping("/{id}")
@@ -76,8 +80,7 @@ public class StadiumController {
             @PathVariable Long id,
             @Parameter(description = "Updated stadium details", required = true)
             @RequestBody Stadium stadium) {
-        // In a real application, this would update the database
-        return ResponseEntity.ok(stadium);
+        return ResponseEntity.ok(stadiumService.updateStadium(id, stadium));
     }
 
     @DeleteMapping("/{id}")
@@ -88,7 +91,7 @@ public class StadiumController {
     public ResponseEntity<Void> deleteStadium(
             @Parameter(description = "ID of the stadium to delete", required = true)
             @PathVariable Long id) {
-        // In a real application, this would delete from the database
+        stadiumService.deleteStadium(id);
         return ResponseEntity.noContent().build();
     }
 }

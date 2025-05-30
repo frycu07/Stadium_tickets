@@ -4,10 +4,11 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.stadium_tickets.entity.Match;
+import org.example.stadium_tickets.service.MatchService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -15,12 +16,17 @@ import java.util.List;
 @Tag(name = "Match Management", description = "APIs for managing football matches")
 public class MatchController {
 
-    private final List<Match> matches = new ArrayList<>();
+    private final MatchService matchService;
+
+    @Autowired
+    public MatchController(MatchService matchService) {
+        this.matchService = matchService;
+    }
 
     @GetMapping
     @Operation(summary = "Get all matches", description = "Retrieves a list of all football matches")
     public ResponseEntity<List<Match>> getAllMatches() {
-        return ResponseEntity.ok(matches);
+        return ResponseEntity.ok(matchService.getAllMatches());
     }
 
     @GetMapping("/{id}")
@@ -28,8 +34,7 @@ public class MatchController {
     public ResponseEntity<Match> getMatchById(
             @Parameter(description = "ID of the match to retrieve", required = true)
             @PathVariable Long id) {
-        // In a real application, this would search the database
-        return ResponseEntity.ok(new Match());
+        return ResponseEntity.ok(matchService.getMatchById(id));
     }
 
     @PostMapping

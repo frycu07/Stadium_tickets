@@ -9,10 +9,11 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.example.stadium_tickets.entity.User;
+import org.example.stadium_tickets.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,12 @@ import java.util.List;
 @Tag(name = "User Management", description = "APIs for managing users")
 public class UserController {
 
-    private final List<User> users = new ArrayList<>();
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
     @Operation(
@@ -38,7 +44,7 @@ public class UserController {
         @ApiResponse(responseCode = "403", description = "Forbidden")
     })
     public ResponseEntity<List<User>> getAllUsers() {
-        return ResponseEntity.ok(users);
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 
     @GetMapping("/{id}")
@@ -56,8 +62,7 @@ public class UserController {
     public ResponseEntity<User> getUserById(
             @Parameter(description = "ID of the user to retrieve", required = true, example = "1")
             @PathVariable Long id) {
-        // In a real application, this would search the database
-        return ResponseEntity.ok(new User());
+        return ResponseEntity.ok(userService.getUserById(id));
     }
 
     @PostMapping
@@ -72,8 +77,7 @@ public class UserController {
     public ResponseEntity<User> createUser(
             @Parameter(description = "User details", required = true)
             @RequestBody User user) {
-        users.add(user);
-        return ResponseEntity.ok(user);
+        return ResponseEntity.ok(userService.createUser(user));
     }
 
     @PutMapping("/{id}")
@@ -94,8 +98,7 @@ public class UserController {
             @PathVariable Long id,
             @Parameter(description = "Updated user details", required = true)
             @RequestBody User user) {
-        // In a real application, this would update the database
-        return ResponseEntity.ok(user);
+        return ResponseEntity.ok(userService.updateUser(id, user));
     }
 
     @DeleteMapping("/{id}")
@@ -113,7 +116,7 @@ public class UserController {
     public ResponseEntity<Void> deleteUser(
             @Parameter(description = "ID of the user to delete", required = true)
             @PathVariable Long id) {
-        // In a real application, this would delete from the database
+        userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
 }

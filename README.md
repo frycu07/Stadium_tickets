@@ -115,10 +115,6 @@ src/
 └── pom.xml                           # Konfiguracja Maven
 ```
 
-## Diagram ERD
-
-Diagram ERD jest dostępny w pliku `src/main/resources/erd_diagram.puml` i przedstawia relacje między encjami w systemie.
-
 ## Tabele bazodanowe
 
 Aplikacja wykorzystuje PostgreSQL z następującymi tabelami:

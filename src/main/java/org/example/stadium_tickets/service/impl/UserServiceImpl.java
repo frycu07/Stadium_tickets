@@ -48,8 +48,10 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("Email already exists: " + user.getEmail());
         }
 
-        // Encode password
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        // Encode password if provided
+        if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+        }
 
         // Add default USER role if no roles are specified
         if (user.getRoles() == null || user.getRoles().isEmpty()) {

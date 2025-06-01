@@ -1,5 +1,6 @@
 package org.example.stadium_tickets.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -24,9 +25,11 @@ public class Match {
 
     @ManyToOne
     @JoinColumn(name = "stadium_id", nullable = false)
+    @JsonManagedReference
     private Stadium stadium;
 
     @OneToMany(mappedBy = "match", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Ticket> tickets = new ArrayList<>();
 
     // Default constructor

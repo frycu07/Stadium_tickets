@@ -18,12 +18,16 @@ services:
     container_name: ticket-flyway
     depends_on:
       - db
-    command: >
-      -url=jdbc:postgresql://db:5432/ticketdb
-      -user=ticketuser
-      -password=secret
-      -locations=filesystem:/flyway/sql
-      migrate
+    command: [
+      "-url=jdbc:postgresql://db:5432/ticketdb",
+      "-user=ticketuser",
+      "-password=secret",
+      "-locations=filesystem:/flyway/sql",
+      "-baselineOnMigrate=true",
+      # Disable validation to allow modified migrations (e.g., admin password change in V3)
+      "-validateOnMigrate=false",
+      "migrate"
+    ]
     volumes:
       - ./src/main/resources/db/migration:/flyway/sql
 

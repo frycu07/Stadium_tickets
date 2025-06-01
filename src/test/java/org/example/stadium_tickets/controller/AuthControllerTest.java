@@ -2,6 +2,9 @@ package org.example.stadium_tickets.controller;
 
 import org.example.stadium_tickets.entity.Role;
 import org.example.stadium_tickets.entity.User;
+import org.example.stadium_tickets.payload.request.LoginRequest;
+import org.example.stadium_tickets.payload.response.JwtResponse;
+import org.example.stadium_tickets.security.JwtUtilsInterface;
 import org.example.stadium_tickets.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,10 +12,15 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -29,10 +37,16 @@ class AuthControllerTest {
     @Mock
     private UserService userService;
 
+    @Mock
+    private AuthenticationManager authenticationManager;
+
+    @Mock
+    private JwtUtilsInterface jwtUtils;
+
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        authController = new AuthController(userService);
+        authController = new AuthController(userService, authenticationManager, jwtUtils);
 
         // Create test roles
         userRole = new Role("USER");
@@ -177,5 +191,76 @@ class AuthControllerTest {
         // Verify the service methods were called
         verify(userService, times(1)).createUser(any(User.class));
         verify(userService, times(1)).addAdminRole(anyLong());
+    }
+
+    @Test
+    void testLogin_Success() {
+        // Create login request
+        LoginRequest loginRequest = new LoginRequest("testuser", "password123");
+
+        // Create user details with authorities
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+        UserDetails userDetails = new org.example.stadium_tickets.security.TestUserDetails("testuser", "password123", authorities);
+
+        // Create test authentication with the mock user details
+        Authentication authentication = new org.example.stadium_tickets.security.TestAuthentication(userDetails);
+
+        // Setup authentication manager mock
+        when(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class)))
+                .thenReturn(authentication);
+
+        // Setup JWT mock
+        when(jwtUtils.generateJwtToken(authentication)).thenReturn("test-jwt-token");
+
+        // Setup user service mock
+        when(userService.findByUsername("testuser")).thenReturn(Optional.of(testUser));
+
+        // Call the login method
+        ResponseEntity<?> response = authController.authenticateUser(loginRequest);
+
+        // Verify response
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody() instanceof JwtResponse);
+
+        JwtResponse jwtResponse = (JwtResponse) response.getBody();
+        assertEquals("test-jwt-token", jwtResponse.getToken());
+        assertEquals(testUser.getId(), jwtResponse.getId());
+        assertEquals(testUser.getUsername(), jwtResponse.getUsername());
+        assertEquals(testUser.getEmail(), jwtResponse.getEmail());
+        assertTrue(jwtResponse.getRoles().contains("ROLE_USER"));
+
+        // Verify method calls
+        verify(authenticationManager, times(1)).authenticate(any(UsernamePasswordAuthenticationToken.class));
+        verify(jwtUtils, times(1)).generateJwtToken(authentication);
+        verify(userService, times(1)).findByUsername("testuser");
+    }
+
+    @Test
+    void testLogin_Failure() {
+        // Create login request
+        LoginRequest loginRequest = new LoginRequest("testuser", "wrongpassword");
+
+        // Setup authentication manager to throw exception
+        when(authenticationManager.authenticate(any(UsernamePasswordAuthenticationToken.class)))
+                .thenThrow(new RuntimeException("Bad credentials"));
+
+        // Call the login method
+        ResponseEntity<?> response = authController.authenticateUser(loginRequest);
+
+        // Verify response
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody() instanceof Map);
+
+        @SuppressWarnings("unchecked")
+        Map<String, String> errorResponse = (Map<String, String>) response.getBody();
+        assertEquals("Invalid username or password", errorResponse.get("error"));
+
+        // Verify method calls
+        verify(authenticationManager, times(1)).authenticate(any(UsernamePasswordAuthenticationToken.class));
+        verify(jwtUtils, never()).generateJwtToken(any());
+        verify(userService, never()).findByUsername(anyString());
     }
 }

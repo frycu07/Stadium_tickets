@@ -35,7 +35,102 @@ This is a Spring Boot application for managing stadium tickets.
    The API documentation is available at:
    http://localhost:8080/swagger-ui.html
 
+## API Usage
+
+### Authentication
+
+The API uses JWT (JSON Web Token) for authentication. To access protected endpoints, you need to:
+
+1. Obtain a JWT token by logging in
+2. Include the token in the `Authorization` header of your requests
+
+#### Login
+
+```
+POST /api/auth/login
+```
+
+Request body:
+```json
+{
+  "username": "your_username",
+  "password": "your_password"
+}
+```
+
+**Note:** Always use the plain text password, not the BCrypt hash. For example, to log in as the admin user:
+```json
+{
+  "username": "admin",
+  "password": "admin"
+}
+```
+
+Response:
+```json
+{
+  "token": "your_jwt_token",
+  "type": "Bearer",
+  "id": 1,
+  "username": "your_username",
+  "email": "your_email",
+  "roles": ["ROLE_USER", "ROLE_ADMIN"]
+}
+```
+
+#### Using the JWT Token
+
+For all protected endpoints, include the JWT token in the Authorization header:
+
+```
+Authorization: Bearer your_jwt_token
+```
+
+
+### Common Issues
+
+#### 403 Forbidden Error
+
+If you receive a 403 Forbidden error when accessing protected endpoints, check:
+
+1. You are using a valid JWT token in the Authorization header
+2. The token is formatted correctly: `Bearer your_jwt_token`
+3. Your user account has the appropriate role for the endpoint
+
+#### 401 Unauthorized Error
+
+If you receive a 401 Unauthorized error, your JWT token might be:
+
+1. Missing from the request
+2. Expired
+3. Invalid
+
+Try logging in again to obtain a new token.
+
 ## Troubleshooting
+
+### Flyway Migration Checksum Mismatch
+
+If you encounter an error like:
+```
+Migration checksum mismatch for migration version X
+-> Applied to database : XXXXXXXXX
+-> Resolved locally    : XXXXXXXXX
+```
+
+This means that a migration file has been modified after it was already applied to the database. There are two ways to resolve this:
+
+1. **Disable Flyway Validation (Current Configuration)**
+
+   The application is configured with `spring.flyway.validate-on-migrate=false` in `application.properties` to allow modified migrations, particularly for the admin password change in V3.
+
+2. **Use Flyway Repair**
+
+   If you need to update the checksums in the database to match the current migration files:
+
+   ```bash
+   docker-compose run --rm flyway repair
+   ```
 
 ### "Schema-validation: missing table [match]" Error
 

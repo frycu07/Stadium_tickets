@@ -1,0 +1,864 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.example:Stadium_tickets >---------------------
+[INFO] Building Stadium_tickets 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.1.0:run (default-cli) > test-compile @ Stadium_tickets >>>
+[INFO] 
+[INFO] --- jacoco:0.8.10:prepare-agent (prepare-agent) @ Stadium_tickets ---
+[INFO] argLine set to "-javaagent:/Users/bartlomiejfryc/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/jacoco.exec"
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Stadium_tickets ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 6 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ Stadium_tickets ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Stadium_tickets ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ Stadium_tickets ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.1.0:run (default-cli) < test-compile @ Stadium_tickets <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.1.0:run (default-cli) @ Stadium_tickets ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.1.0)[0;39m
+
+[2m2025-06-01T10:59:15.107+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m Starting StadiumTicketsApplication using Java 23.0.2 with PID 29836 (/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes started by bartlomiejfryc in /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets)
+[2m2025-06-01T10:59:15.108+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2025-06-01T10:59:15.133+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2025-06-01T10:59:15.133+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2m2025-06-01T10:59:15.412+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2025-06-01T10:59:15.434+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+[2m2025-06-01T10:59:15.687+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2025-06-01T10:59:15.690+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2025-06-01T10:59:15.690+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+[2m2025-06-01T10:59:15.712+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2025-06-01T10:59:15.718+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 578 ms
+[2m2025-06-01T10:59:15.781+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.internal.license.VersionPrinter   [0;39m [2m:[0;39m Flyway Community Edition 9.16.3 by Redgate
+[2m2025-06-01T10:59:15.782+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.internal.license.VersionPrinter   [0;39m [2m:[0;39m See release notes here: https://rd.gt/416ObMi
+[2m2025-06-01T10:59:15.782+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.internal.license.VersionPrinter   [0;39m [2m:[0;39m 
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classpath resources at 'classpath:db/callback' ...
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@12cdbb4a
+ ...
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Unable to resolve location classpath:db/callback.
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classpath resources at 'classpath:db/migration' ...
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@12cdbb4a
+ ...
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning URL: file:/Users/bartlomiejfryc/Documents/Uczelnia/Project%20JAVA%20SEM4/Stadium_tickets/target/classes/db/migration
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mi.s.c.FileSystemClassPathLocationScanner[0;39m [2m:[0;39m Scanning starting at classpath root in filesystem: /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/
+[2m2025-06-01T10:59:15.783+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mi.s.c.FileSystemClassPathLocationScanner[0;39m [2m:[0;39m Scanning for resources in path: /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/db/migration (db/migration)
+[2m2025-06-01T10:59:15.784+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V1__init_schema.sql
+[2m2025-06-01T10:59:15.784+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V2__create_users_and_roles.sql
+[2m2025-06-01T10:59:15.784+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V3__add_sample_data.sql
+[2m2025-06-01T10:59:15.784+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V4__alter_match_id_type.sql
+[2m2025-06-01T10:59:15.784+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classes at classpath:db/migration
+[2m2025-06-01T10:59:15.785+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V4__alter_match_id_type.sql
+[2m2025-06-01T10:59:15.785+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V3__add_sample_data.sql
+[2m2025-06-01T10:59:15.785+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V1__init_schema.sql
+[2m2025-06-01T10:59:15.785+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V2__create_users_and_roles.sql
+[2m2025-06-01T10:59:15.786+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2025-06-01T10:59:15.864+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64f0bff8
+[2m2025-06-01T10:59:15.865+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2025-06-01T10:59:15.872+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.database.base.BaseDatabaseType  [0;39m [2m:[0;39m Database: jdbc:postgresql://localhost:5432/ticketdb (PostgreSQL 15.13)
+[2m2025-06-01T10:59:15.872+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.database.base.BaseDatabaseType  [0;39m [2m:[0;39m Driver  : PostgreSQL JDBC Driver 42.6.0
+[2m2025-06-01T10:59:15.873+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.flywaydb.core.FlywayExecutor        [0;39m [2m:[0;39m DDL Transactions Supported: true
+[2m2025-06-01T10:59:15.873+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.SchemaHistoryFactory          [0;39m [2m:[0;39m Schemas: 
+[2m2025-06-01T10:59:15.873+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.SchemaHistoryFactory          [0;39m [2m:[0;39m Default schema: null
+[2m2025-06-01T10:59:15.879+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.c.SqlScriptCallbackFactory      [0;39m [2m:[0;39m Scanning for SQL callbacks ...
+[2m2025-06-01T10:59:15.884+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Validating migrations ...
+[2m2025-06-01T10:59:15.888+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V4__alter_match_id_type.sql (filename: V4__alter_match_id_type.sql)
+[2m2025-06-01T10:59:15.889+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V3__add_sample_data.sql (filename: V3__add_sample_data.sql)
+[2m2025-06-01T10:59:15.889+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V1__init_schema.sql (filename: V1__init_schema.sql)
+[2m2025-06-01T10:59:15.889+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V2__create_users_and_roles.sql (filename: V2__create_users_and_roles.sql)
+[2m2025-06-01T10:59:15.900+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Successfully validated 4 migrations (execution time 00:00.015s)
+[2m2025-06-01T10:59:15.902+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbSchemas     [0;39m [2m:[0;39m Skipping creation of existing schema: "public"
+[2m2025-06-01T10:59:15.927+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Current version of schema "public": 3
+[2m2025-06-01T10:59:15.927+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.flywaydb.core.internal.parser.Parser  [0;39m [2m:[0;39m Parsing V4__alter_match_id_type.sql ...
+[2m2025-06-01T10:59:15.931+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 5: -- Alter all tables to use BIGINT for id columns instead of INT
+-- This is needed to match the Long type used in Java entity classes
+
+-- First, drop all foreign key constraints
+ALTER TABLE ticket DROP CONSTRAINT ticket_match_id_fkey
+[2m2025-06-01T10:59:15.931+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 6: ALTER TABLE match DROP CONSTRAINT match_stadium_id_fkey
+[2m2025-06-01T10:59:15.931+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 7: ALTER TABLE user_roles DROP CONSTRAINT user_roles_user_id_fkey
+[2m2025-06-01T10:59:15.931+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 8: ALTER TABLE user_roles DROP CONSTRAINT user_roles_role_id_fkey
+[2m2025-06-01T10:59:15.931+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 11: -- Update stadium table
+CREATE SEQUENCE stadium_id_seq_bigint
+[2m2025-06-01T10:59:15.931+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 12: ALTER TABLE stadium ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 13: ALTER TABLE stadium ALTER COLUMN id SET DEFAULT nextval('stadium_id_seq_bigint')
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 14: SELECT setval('stadium_id_seq_bigint', (SELECT max(id) FROM stadium))
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 15: ALTER SEQUENCE stadium_id_seq_bigint OWNED BY stadium.id
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 18: -- Update match table
+CREATE SEQUENCE match_id_seq_bigint
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 19: ALTER TABLE match ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 20: ALTER TABLE match ALTER COLUMN id SET DEFAULT nextval('match_id_seq_bigint')
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 21: SELECT setval('match_id_seq_bigint', (SELECT max(id) FROM match))
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 22: ALTER SEQUENCE match_id_seq_bigint OWNED BY match.id
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 23: ALTER TABLE match ALTER COLUMN stadium_id TYPE BIGINT
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 26: -- Update ticket table
+CREATE SEQUENCE ticket_id_seq_bigint
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 27: ALTER TABLE ticket ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.932+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 28: ALTER TABLE ticket ALTER COLUMN id SET DEFAULT nextval('ticket_id_seq_bigint')
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 29: SELECT setval('ticket_id_seq_bigint', (SELECT max(id) FROM ticket))
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 30: ALTER SEQUENCE ticket_id_seq_bigint OWNED BY ticket.id
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 31: ALTER TABLE ticket ALTER COLUMN match_id TYPE BIGINT
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 34: -- Update users table
+CREATE SEQUENCE users_id_seq_bigint
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 35: ALTER TABLE users ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 36: ALTER TABLE users ALTER COLUMN id SET DEFAULT nextval('users_id_seq_bigint')
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 37: SELECT setval('users_id_seq_bigint', (SELECT max(id) FROM users))
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 38: ALTER SEQUENCE users_id_seq_bigint OWNED BY users.id
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 41: -- Update roles table
+CREATE SEQUENCE roles_id_seq_bigint
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 42: ALTER TABLE roles ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 43: ALTER TABLE roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq_bigint')
+[2m2025-06-01T10:59:15.933+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 44: SELECT setval('roles_id_seq_bigint', (SELECT max(id) FROM roles))
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 45: ALTER SEQUENCE roles_id_seq_bigint OWNED BY roles.id
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 48: -- Update user_roles junction table
+ALTER TABLE user_roles ALTER COLUMN user_id TYPE BIGINT
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 49: ALTER TABLE user_roles ALTER COLUMN role_id TYPE BIGINT
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 52: -- Recreate all foreign key constraints
+ALTER TABLE match ADD CONSTRAINT match_stadium_id_fkey FOREIGN KEY (stadium_id) REFERENCES stadium(id) ON DELETE RESTRICT
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 53: ALTER TABLE ticket ADD CONSTRAINT ticket_match_id_fkey FOREIGN KEY (match_id) REFERENCES match(id) ON DELETE CASCADE
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 54: ALTER TABLE user_roles ADD CONSTRAINT user_roles_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+[2m2025-06-01T10:59:15.934+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.sqlscript.ParserSqlScript       [0;39m [2m:[0;39m Found statement at line 55: ALTER TABLE user_roles ADD CONSTRAINT user_roles_role_id_fkey FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
+[2m2025-06-01T10:59:15.935+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Starting migration of schema "public" to version "4 - alter match id type" ...
+[2m2025-06-01T10:59:15.937+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Migrating schema "public" to version "4 - alter match id type"
+[2m2025-06-01T10:59:15.939+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Alter all tables to use BIGINT for id columns instead of INT
+-- This is needed to match the Long type used in Java entity classes
+
+-- First, drop all foreign key constraints
+ALTER TABLE ticket DROP CONSTRAINT ticket_match_id_fkey
+[2m2025-06-01T10:59:15.941+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.941+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE match DROP CONSTRAINT match_stadium_id_fkey
+[2m2025-06-01T10:59:15.942+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.942+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE user_roles DROP CONSTRAINT user_roles_user_id_fkey
+[2m2025-06-01T10:59:15.943+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.943+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE user_roles DROP CONSTRAINT user_roles_role_id_fkey
+[2m2025-06-01T10:59:15.945+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.945+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Update stadium table
+CREATE SEQUENCE stadium_id_seq_bigint
+[2m2025-06-01T10:59:15.948+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.948+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE stadium ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.954+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.954+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE stadium ALTER COLUMN id SET DEFAULT nextval('stadium_id_seq_bigint')
+[2m2025-06-01T10:59:15.955+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.955+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: SELECT setval('stadium_id_seq_bigint', (SELECT max(id) FROM stadium))
+[2m2025-06-01T10:59:15.956+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m +--------+
+| setval |
++--------+
+| 3      |
++--------+
+
+[2m2025-06-01T10:59:15.956+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER SEQUENCE stadium_id_seq_bigint OWNED BY stadium.id
+[2m2025-06-01T10:59:15.956+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.956+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Update match table
+CREATE SEQUENCE match_id_seq_bigint
+[2m2025-06-01T10:59:15.957+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.957+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE match ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.960+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.960+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE match ALTER COLUMN id SET DEFAULT nextval('match_id_seq_bigint')
+[2m2025-06-01T10:59:15.961+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.961+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: SELECT setval('match_id_seq_bigint', (SELECT max(id) FROM match))
+[2m2025-06-01T10:59:15.962+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m +--------+
+| setval |
++--------+
+| 3      |
++--------+
+
+[2m2025-06-01T10:59:15.962+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER SEQUENCE match_id_seq_bigint OWNED BY match.id
+[2m2025-06-01T10:59:15.962+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.962+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE match ALTER COLUMN stadium_id TYPE BIGINT
+[2m2025-06-01T10:59:15.963+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.964+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Update ticket table
+CREATE SEQUENCE ticket_id_seq_bigint
+[2m2025-06-01T10:59:15.964+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.964+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE ticket ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.966+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.966+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE ticket ALTER COLUMN id SET DEFAULT nextval('ticket_id_seq_bigint')
+[2m2025-06-01T10:59:15.966+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.966+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: SELECT setval('ticket_id_seq_bigint', (SELECT max(id) FROM ticket))
+[2m2025-06-01T10:59:15.966+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m +--------+
+| setval |
++--------+
+| 18     |
++--------+
+
+[2m2025-06-01T10:59:15.966+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER SEQUENCE ticket_id_seq_bigint OWNED BY ticket.id
+[2m2025-06-01T10:59:15.967+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.967+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE ticket ALTER COLUMN match_id TYPE BIGINT
+[2m2025-06-01T10:59:15.968+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.968+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Update users table
+CREATE SEQUENCE users_id_seq_bigint
+[2m2025-06-01T10:59:15.968+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.968+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE users ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.972+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.972+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE users ALTER COLUMN id SET DEFAULT nextval('users_id_seq_bigint')
+[2m2025-06-01T10:59:15.972+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.972+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: SELECT setval('users_id_seq_bigint', (SELECT max(id) FROM users))
+[2m2025-06-01T10:59:15.973+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m +--------+
+| setval |
++--------+
+| 2      |
++--------+
+
+[2m2025-06-01T10:59:15.973+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER SEQUENCE users_id_seq_bigint OWNED BY users.id
+[2m2025-06-01T10:59:15.973+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.973+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Update roles table
+CREATE SEQUENCE roles_id_seq_bigint
+[2m2025-06-01T10:59:15.974+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.974+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE roles ALTER COLUMN id TYPE BIGINT
+[2m2025-06-01T10:59:15.979+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.979+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq_bigint')
+[2m2025-06-01T10:59:15.979+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.979+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: SELECT setval('roles_id_seq_bigint', (SELECT max(id) FROM roles))
+[2m2025-06-01T10:59:15.980+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m +--------+
+| setval |
++--------+
+| 2      |
++--------+
+
+[2m2025-06-01T10:59:15.980+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER SEQUENCE roles_id_seq_bigint OWNED BY roles.id
+[2m2025-06-01T10:59:15.980+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.980+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Update user_roles junction table
+ALTER TABLE user_roles ALTER COLUMN user_id TYPE BIGINT
+[2m2025-06-01T10:59:15.982+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.982+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE user_roles ALTER COLUMN role_id TYPE BIGINT
+[2m2025-06-01T10:59:15.983+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.983+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: -- Recreate all foreign key constraints
+ALTER TABLE match ADD CONSTRAINT match_stadium_id_fkey FOREIGN KEY (stadium_id) REFERENCES stadium(id) ON DELETE RESTRICT
+[2m2025-06-01T10:59:15.985+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.985+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE ticket ADD CONSTRAINT ticket_match_id_fkey FOREIGN KEY (match_id) REFERENCES match(id) ON DELETE CASCADE
+[2m2025-06-01T10:59:15.986+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.986+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE user_roles ADD CONSTRAINT user_roles_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+[2m2025-06-01T10:59:15.986+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.986+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m Executing SQL: ALTER TABLE user_roles ADD CONSTRAINT user_roles_role_id_fkey FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
+[2m2025-06-01T10:59:15.987+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.DefaultSqlScriptExecutor      [0;39m [2m:[0;39m 0 rows affected
+[2m2025-06-01T10:59:15.987+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Successfully completed migration of schema "public" to version "4 - alter match id type"
+[2m2025-06-01T10:59:15.990+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.JdbcTableSchemaHistory        [0;39m [2m:[0;39m Schema History table "public"."flyway_schema_history" successfully updated to reflect changes
+[2m2025-06-01T10:59:15.996+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Successfully applied 1 migration to schema "public", now at version v4 (execution time 00:00.073s)
+[2m2025-06-01T10:59:16.001+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.flywaydb.core.FlywayExecutor        [0;39m [2m:[0;39m Memory usage: 46 of 72M
+[2m2025-06-01T10:59:16.039+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+[2m2025-06-01T10:59:16.061+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.2.2.Final
+[2m2025-06-01T10:59:16.062+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000406: Using bytecode reflection optimizer
+[2m2025-06-01T10:59:16.111+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.b.i.BytecodeProviderInitiator       [0;39m [2m:[0;39m HHH000021: Bytecode provider name : bytebuddy
+[2m2025-06-01T10:59:16.158+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo     [0;39m [2m:[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+[2m2025-06-01T10:59:16.180+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.orm.dialect               [0;39m [2m:[0;39m HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@4ae3d35c
+[2m2025-06-01T10:59:16.256+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.b.i.BytecodeProviderInitiator       [0;39m [2m:[0;39m HHH000021: Bytecode provider name : bytebuddy
+[2m2025-06-01T10:59:16.500+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2m2025-06-01T10:59:16.527+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2025-06-01T10:59:16.668+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.security.JwtAuthenticationFilter  [0;39m [2m:[0;39m Filter 'jwtAuthenticationFilter' configured for use
+[2m2025-06-01T10:59:16.835+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2m2025-06-01T10:59:16.967+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@184a9b4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e0a5fed, org.springframework.security.web.context.SecurityContextHolderFilter@1f41f84a, org.springframework.security.web.header.HeaderWriterFilter@7275aaa6, org.springframework.security.web.authentication.logout.LogoutFilter@1a35a4bc, org.example.stadium_tickets.security.JwtAuthenticationFilter@676b8bce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60a59642, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ebefa9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13e53345, org.springframework.security.web.session.SessionManagementFilter@2541f229, org.springframework.security.web.access.ExceptionTranslationFilter@6c76015f, org.springframework.security.web.access.intercept.AuthorizationFilter@357f47de]
+[2m2025-06-01T10:59:17.078+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2025-06-01T10:59:17.090+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[2m2025-06-01T10:59:17.096+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m Started StadiumTicketsApplication in 2.116 seconds (process running for 2.283)
+Hibernate: 
+    select
+        count(*) 
+    from
+        roles r1_0
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? fetch first ? rows only
+[2m2025-06-01T10:59:17.247+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.config.DataInitializer            [0;39m [2m:[0;39m Roles and admin user already exist, skipping initialization
+[2m2025-06-01T11:10:11.782+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[   File Watcher][0;39m [36mrtingClassPathChangeChangedEventListener[0;39m [2m:[0;39m Restarting due to 44 class path changes (0 additions, 37 deletions, 7 modifications)
+[2m2025-06-01T11:10:11.797+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[       Thread-5][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service [Tomcat]
+[2m2025-06-01T11:10:11.804+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[       Thread-5][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+[2m2025-06-01T11:10:11.811+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[       Thread-5][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2025-06-01T11:10:11.818+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[       Thread-5][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2025-06-01T11:10:11.820+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[       Thread-5][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.1.0)[0;39m
+
+[2m2025-06-01T11:10:11.890+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m Starting StadiumTicketsApplication using Java 23.0.2 with PID 29836 (/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes started by bartlomiejfryc in /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets)
+[2m2025-06-01T11:10:11.890+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2025-06-01T11:10:11.974+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2025-06-01T11:10:11.981+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 7 ms. Found 5 JPA repository interfaces.
+[2m2025-06-01T11:10:12.060+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2025-06-01T11:10:12.061+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2025-06-01T11:10:12.061+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+[2m2025-06-01T11:10:12.065+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2025-06-01T11:10:12.066+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 174 ms
+[2m2025-06-01T11:10:12.167+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classpath resources at 'classpath:db/callback' ...
+[2m2025-06-01T11:10:12.167+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6624793f
+ ...
+[2m2025-06-01T11:10:12.167+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Unable to resolve location classpath:db/callback.
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classpath resources at 'classpath:db/migration' ...
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6624793f
+ ...
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning URL: file:/Users/bartlomiejfryc/Documents/Uczelnia/Project%20JAVA%20SEM4/Stadium_tickets/target/classes/db/migration
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mi.s.c.FileSystemClassPathLocationScanner[0;39m [2m:[0;39m Scanning starting at classpath root in filesystem: /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mi.s.c.FileSystemClassPathLocationScanner[0;39m [2m:[0;39m Scanning for resources in path: /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/db/migration (db/migration)
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V1__init_schema.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V2__create_users_and_roles.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V3__add_sample_data.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V4__alter_match_id_type.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classes at classpath:db/migration
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V4__alter_match_id_type.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V3__add_sample_data.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V1__init_schema.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V2__create_users_and_roles.sql
+[2m2025-06-01T11:10:12.169+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-2 - Starting...
+[2m2025-06-01T11:10:12.229+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@7c9a7c2e
+[2m2025-06-01T11:10:12.230+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-2 - Start completed.
+[2m2025-06-01T11:10:12.238+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.database.base.BaseDatabaseType  [0;39m [2m:[0;39m Database: jdbc:postgresql://localhost:5432/ticketdb (PostgreSQL 15.13)
+[2m2025-06-01T11:10:12.238+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.database.base.BaseDatabaseType  [0;39m [2m:[0;39m Driver  : PostgreSQL JDBC Driver 42.6.0
+[2m2025-06-01T11:10:12.238+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.flywaydb.core.FlywayExecutor        [0;39m [2m:[0;39m DDL Transactions Supported: true
+[2m2025-06-01T11:10:12.238+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.SchemaHistoryFactory          [0;39m [2m:[0;39m Schemas: 
+[2m2025-06-01T11:10:12.238+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.SchemaHistoryFactory          [0;39m [2m:[0;39m Default schema: null
+[2m2025-06-01T11:10:12.271+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.c.SqlScriptCallbackFactory      [0;39m [2m:[0;39m Scanning for SQL callbacks ...
+[2m2025-06-01T11:10:12.276+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Validating migrations ...
+[2m2025-06-01T11:10:12.279+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V4__alter_match_id_type.sql (filename: V4__alter_match_id_type.sql)
+[2m2025-06-01T11:10:12.280+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V3__add_sample_data.sql (filename: V3__add_sample_data.sql)
+[2m2025-06-01T11:10:12.280+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V1__init_schema.sql (filename: V1__init_schema.sql)
+[2m2025-06-01T11:10:12.280+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V2__create_users_and_roles.sql (filename: V2__create_users_and_roles.sql)
+[2m2025-06-01T11:10:12.291+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Successfully validated 4 migrations (execution time 00:00.015s)
+[2m2025-06-01T11:10:12.294+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbSchemas     [0;39m [2m:[0;39m Skipping creation of existing schema: "public"
+[2m2025-06-01T11:10:12.338+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Current version of schema "public": 4
+[2m2025-06-01T11:10:12.339+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Schema "public" is up to date. No migration necessary.
+[2m2025-06-01T11:10:12.359+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.flywaydb.core.FlywayExecutor        [0;39m [2m:[0;39m Memory usage: 35 of 88M
+[2m2025-06-01T11:10:12.375+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+[2m2025-06-01T11:10:12.378+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.b.i.BytecodeProviderInitiator       [0;39m [2m:[0;39m HHH000021: Bytecode provider name : bytebuddy
+[2m2025-06-01T11:10:12.378+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo     [0;39m [2m:[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+[2m2025-06-01T11:10:12.381+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.orm.dialect               [0;39m [2m:[0;39m HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@22cd7c34
+[2m2025-06-01T11:10:12.396+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.b.i.BytecodeProviderInitiator       [0;39m [2m:[0;39m HHH000021: Bytecode provider name : bytebuddy
+[2m2025-06-01T11:10:12.445+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2m2025-06-01T11:10:12.465+02:00[0;39m [31mERROR[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+[2m2025-06-01T11:10:12.465+02:00[0;39m [31mERROR[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.web.embedded.tomcat.TomcatStarter [0;39m [2m:[0;39m Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/org/example/stadium_tickets/service/impl/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+[2m2025-06-01T11:10:12.466+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service [Tomcat]
+[2m2025-06-01T11:10:12.467+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+[2m2025-06-01T11:10:12.467+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [ROOT] appears to have started a thread named [HikariPool-2 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:201)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103)
+ org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+ org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+ org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+ org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+ org.postgresql.core.PGStream.receiveChar(PGStream.java:465)
+ org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:678)
+ org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+ org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+ org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+ org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+ org.postgresql.Driver.makeConnection(Driver.java:443)
+ org.postgresql.Driver.connect(Driver.java:297)
+ com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+ com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+ com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+ com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:733)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+ java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+[2m2025-06-01T11:10:12.469+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+[2m2025-06-01T11:10:12.469+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-2 - Shutdown initiated...
+[2m2025-06-01T11:10:12.493+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-2 - Shutdown completed.
+[2m2025-06-01T11:10:12.496+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.b.a.l.ConditionEvaluationReportLogger[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2m2025-06-01T11:10:12.506+02:00[0;39m [31mERROR[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:602) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.example.stadium_tickets.StadiumTicketsApplication.main(StadiumTicketsApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:489) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:183) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-3.1.0.jar:3.1.0]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/org/example/stadium_tickets/service/impl/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:261) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:235) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4882) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:846) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:241) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:913) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:485) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-3.1.0.jar:3.1.0]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/org/example/stadium_tickets/service/impl/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 58 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1682) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 71 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:517) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 97 common frames omitted
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 104 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:165) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:152) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:293) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:291) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.9.jar:6.0.9]
+	... 108 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.1.0)[0;39m
+
+[2m2025-06-01T11:10:13.948+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m Starting StadiumTicketsApplication using Java 23.0.2 with PID 29836 (/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes started by bartlomiejfryc in /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets)
+[2m2025-06-01T11:10:13.948+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.e.s.StadiumTicketsApplication         [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2025-06-01T11:10:14.013+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2025-06-01T11:10:14.019+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 5 ms. Found 5 JPA repository interfaces.
+[2m2025-06-01T11:10:14.069+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2025-06-01T11:10:14.070+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2025-06-01T11:10:14.070+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+[2m2025-06-01T11:10:14.073+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat-1].[localhost].[/]    [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2025-06-01T11:10:14.073+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 124 ms
+[2m2025-06-01T11:10:14.091+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classpath resources at 'classpath:db/callback' ...
+[2m2025-06-01T11:10:14.091+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b0914b6
+ ...
+[2m2025-06-01T11:10:14.091+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Unable to resolve location classpath:db/callback.
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classpath resources at 'classpath:db/migration' ...
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b0914b6
+ ...
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning URL: file:/Users/bartlomiejfryc/Documents/Uczelnia/Project%20JAVA%20SEM4/Stadium_tickets/target/classes/db/migration
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mi.s.c.FileSystemClassPathLocationScanner[0;39m [2m:[0;39m Scanning starting at classpath root in filesystem: /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mi.s.c.FileSystemClassPathLocationScanner[0;39m [2m:[0;39m Scanning for resources in path: /Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/db/migration (db/migration)
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V1__init_schema.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V2__create_users_and_roles.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V3__add_sample_data.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Found resource: db/migration/V4__alter_match_id_type.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.classpath.ClassPathScanner    [0;39m [2m:[0;39m Scanning for classes at classpath:db/migration
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V4__alter_match_id_type.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V3__add_sample_data.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V1__init_schema.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.resource.ResourceNameValidator  [0;39m [2m:[0;39m Validating V2__create_users_and_roles.sql
+[2m2025-06-01T11:10:14.092+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-3 - Starting...
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@4775f379
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-3 - Start completed.
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.database.base.BaseDatabaseType  [0;39m [2m:[0;39m Database: jdbc:postgresql://localhost:5432/ticketdb (PostgreSQL 15.13)
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.database.base.BaseDatabaseType  [0;39m [2m:[0;39m Driver  : PostgreSQL JDBC Driver 42.6.0
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.flywaydb.core.FlywayExecutor        [0;39m [2m:[0;39m DDL Transactions Supported: true
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.SchemaHistoryFactory          [0;39m [2m:[0;39m Schemas: 
+[2m2025-06-01T11:10:14.110+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.s.SchemaHistoryFactory          [0;39m [2m:[0;39m Default schema: null
+[2m2025-06-01T11:10:14.114+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.c.i.c.SqlScriptCallbackFactory      [0;39m [2m:[0;39m Scanning for SQL callbacks ...
+[2m2025-06-01T11:10:14.116+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Validating migrations ...
+[2m2025-06-01T11:10:14.116+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V4__alter_match_id_type.sql (filename: V4__alter_match_id_type.sql)
+[2m2025-06-01T11:10:14.116+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V3__add_sample_data.sql (filename: V3__add_sample_data.sql)
+[2m2025-06-01T11:10:14.116+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V1__init_schema.sql (filename: V1__init_schema.sql)
+[2m2025-06-01T11:10:14.116+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.scanner.Scanner       [0;39m [2m:[0;39m Filtering out resource: db/migration/V2__create_users_and_roles.sql (filename: V2__create_users_and_roles.sql)
+[2m2025-06-01T11:10:14.122+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Successfully validated 4 migrations (execution time 00:00.005s)
+[2m2025-06-01T11:10:14.122+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbSchemas     [0;39m [2m:[0;39m Skipping creation of existing schema: "public"
+[2m2025-06-01T11:10:14.143+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Current version of schema "public": 4
+[2m2025-06-01T11:10:14.145+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Schema "public" is up to date. No migration necessary.
+[2m2025-06-01T11:10:14.150+02:00[0;39m [32mDEBUG[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.flywaydb.core.FlywayExecutor        [0;39m [2m:[0;39m Memory usage: 59 of 88M
+[2m2025-06-01T11:10:14.159+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+[2m2025-06-01T11:10:14.161+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.b.i.BytecodeProviderInitiator       [0;39m [2m:[0;39m HHH000021: Bytecode provider name : bytebuddy
+[2m2025-06-01T11:10:14.161+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo     [0;39m [2m:[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+[2m2025-06-01T11:10:14.162+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.orm.dialect               [0;39m [2m:[0;39m HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2faaca25
+[2m2025-06-01T11:10:14.169+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.b.i.BytecodeProviderInitiator       [0;39m [2m:[0;39m HHH000021: Bytecode provider name : bytebuddy
+[2m2025-06-01T11:10:14.189+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2m2025-06-01T11:10:14.196+02:00[0;39m [31mERROR[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+[2m2025-06-01T11:10:14.197+02:00[0;39m [31mERROR[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.web.embedded.tomcat.TomcatStarter [0;39m [2m:[0;39m Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/org/example/stadium_tickets/service/impl/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+[2m2025-06-01T11:10:14.197+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service [Tomcat]
+[2m2025-06-01T11:10:14.198+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+[2m2025-06-01T11:10:14.198+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [ROOT] appears to have started a thread named [HikariPool-3 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.security.provider.SHA2.implCompress0(SHA2.java:193)
+ java.base/sun.security.provider.SHA2.implCompress(SHA2.java:135)
+ java.base/sun.security.provider.SHA2.implDigest(SHA2.java:114)
+ java.base/sun.security.provider.DigestBase.engineDigest(DigestBase.java:205)
+ java.base/java.security.MessageDigest$Delegate.engineDigest(MessageDigest.java:681)
+ java.base/java.security.MessageDigest.digest(MessageDigest.java:414)
+ java.base/com.sun.crypto.provider.HmacCore.engineDoFinal(HmacCore.java:240)
+ java.base/javax.crypto.Mac.doFinal(Mac.java:580)
+ java.base/javax.crypto.Mac.doFinal(Mac.java:623)
+ java.base/com.sun.crypto.provider.PBKDF2KeyImpl.deriveKey(PBKDF2KeyImpl.java:201)
+ java.base/com.sun.crypto.provider.PBKDF2KeyImpl.<init>(PBKDF2KeyImpl.java:115)
+ java.base/com.sun.crypto.provider.PBKDF2Core.engineGenerateSecret(PBKDF2Core.java:68)
+ java.base/javax.crypto.SecretKeyFactory.generateSecret(SecretKeyFactory.java:337)
+ org.postgresql.shaded.com.ongres.scram.common.util.CryptoUtil.hi(CryptoUtil.java:120)
+ org.postgresql.shaded.com.ongres.scram.common.ScramMechanisms.saltedPassword(ScramMechanisms.java:154)
+ org.postgresql.shaded.com.ongres.scram.common.ScramFunctions.saltedPassword(ScramFunctions.java:59)
+ org.postgresql.shaded.com.ongres.scram.client.ScramSession$ClientFinalProcessor.<init>(ScramSession.java:196)
+ org.postgresql.shaded.com.ongres.scram.client.ScramSession$ClientFinalProcessor.<init>(ScramSession.java:163)
+ org.postgresql.shaded.com.ongres.scram.client.ScramSession$ServerFirstProcessor.clientFinalProcessor(ScramSession.java:130)
+ org.postgresql.jre7.sasl.ScramAuthenticator.processServerFirstMessage(ScramAuthenticator.java:147)
+ org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:863)
+ org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+ org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+ org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+ org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+ org.postgresql.Driver.makeConnection(Driver.java:443)
+ org.postgresql.Driver.connect(Driver.java:297)
+ com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+ com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+ com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+ com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:733)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+ java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+[2m2025-06-01T11:10:14.198+02:00[0;39m [33m WARN[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+[2m2025-06-01T11:10:14.198+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-3 - Shutdown initiated...
+[2m2025-06-01T11:10:14.215+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-3 - Shutdown completed.
+[2m2025-06-01T11:10:14.217+02:00[0;39m [32m INFO[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.b.a.l.ConditionEvaluationReportLogger[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2m2025-06-01T11:10:14.218+02:00[0;39m [31mERROR[0;39m [35m29836[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:602) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.example.stadium_tickets.StadiumTicketsApplication.main(StadiumTicketsApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:489) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:183) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-3.1.0.jar:3.1.0]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/org/example/stadium_tickets/service/impl/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:261) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:235) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4882) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:846) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:241) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:913) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:485) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-3.1.0.jar:3.1.0]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [/Users/bartlomiejfryc/Documents/Uczelnia/Project JAVA SEM4/Stadium_tickets/target/classes/org/example/stadium_tickets/service/impl/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 58 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in org.example.stadium_tickets.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1682) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 71 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:517) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 97 common frames omitted
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 104 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [id] in table [match]; found [bigserial (Types#BIGINT)], but expecting [integer (Types#INTEGER)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:165) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:152) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:293) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:291) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.2.Final.jar:6.2.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.9.jar:6.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.9.jar:6.0.9]
+	... 108 common frames omitted
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18:54 min
+[INFO] Finished at: 2025-06-01T11:18:08+02:00
+[INFO] ------------------------------------------------------------------------

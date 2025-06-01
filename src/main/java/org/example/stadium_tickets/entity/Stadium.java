@@ -1,5 +1,6 @@
 package org.example.stadium_tickets.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class Stadium {
     private Integer capacity;
 
     @OneToMany(mappedBy = "stadium", cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Match> matches = new ArrayList<>();
 
     // Default constructor

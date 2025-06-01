@@ -237,4 +237,86 @@ class UserServiceImplTest {
         assertTrue(userService.existsByEmail("test@example.com"));
         assertFalse(userService.existsByEmail("nonexistent@example.com"));
     }
+
+    @Test
+    void testAddUserRole() {
+        // Arrange
+        User user = new User("testuser", "password", "test@example.com");
+        user.setId(1L);
+        Role userRole = new Role("USER");
+
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+        when(roleRepository.findByName("USER")).thenReturn(Optional.of(userRole));
+        when(userRepository.save(any(User.class))).thenReturn(user);
+
+        // Act
+        User result = userService.addUserRole(1L);
+
+        // Assert
+        assertNotNull(result);
+        assertTrue(result.getRoles().contains(userRole));
+        verify(userRepository).save(user);
+    }
+
+    @Test
+    void testAddAdminRole() {
+        // Arrange
+        User user = new User("testuser", "password", "test@example.com");
+        user.setId(1L);
+        Role adminRole = new Role("ADMIN");
+
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+        when(roleRepository.findByName("ADMIN")).thenReturn(Optional.of(adminRole));
+        when(userRepository.save(any(User.class))).thenReturn(user);
+
+        // Act
+        User result = userService.addAdminRole(1L);
+
+        // Assert
+        assertNotNull(result);
+        assertTrue(result.getRoles().contains(adminRole));
+        verify(userRepository).save(user);
+    }
+
+    @Test
+    void testRemoveUserRole() {
+        // Arrange
+        User user = new User("testuser", "password", "test@example.com");
+        user.setId(1L);
+        Role userRole = new Role("USER");
+        user.addRole(userRole);
+
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+        when(roleRepository.findByName("USER")).thenReturn(Optional.of(userRole));
+        when(userRepository.save(any(User.class))).thenReturn(user);
+
+        // Act
+        User result = userService.removeUserRole(1L);
+
+        // Assert
+        assertNotNull(result);
+        assertFalse(result.getRoles().stream().anyMatch(role -> role.getName().equals("USER")));
+        verify(userRepository).save(user);
+    }
+
+    @Test
+    void testRemoveAdminRole() {
+        // Arrange
+        User user = new User("testuser", "password", "test@example.com");
+        user.setId(1L);
+        Role adminRole = new Role("ADMIN");
+        user.addRole(adminRole);
+
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+        when(roleRepository.findByName("ADMIN")).thenReturn(Optional.of(adminRole));
+        when(userRepository.save(any(User.class))).thenReturn(user);
+
+        // Act
+        User result = userService.removeAdminRole(1L);
+
+        // Assert
+        assertNotNull(result);
+        assertFalse(result.getRoles().stream().anyMatch(role -> role.getName().equals("ADMIN")));
+        verify(userRepository).save(user);
+    }
 }

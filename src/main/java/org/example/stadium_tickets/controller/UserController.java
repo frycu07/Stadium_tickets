@@ -35,6 +35,10 @@ public class UserController {
         this.userService = userService;
     }
 
+    protected Authentication getAuthentication() {
+        return SecurityContextHolder.getContext().getAuthentication();
+    }
+
     @GetMapping
     @Operation(
         summary = "Get all users", 
@@ -121,7 +125,7 @@ public class UserController {
         @ApiResponse(responseCode = "401", description = "Unauthorized")
     })
     public ResponseEntity<?> getCurrentUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = getAuthentication();
         String username = authentication.getName();
 
         Optional<User> userOptional = userService.findByUsername(username);
@@ -149,7 +153,7 @@ public class UserController {
         @ApiResponse(responseCode = "401", description = "Unauthorized")
     })
     public ResponseEntity<?> updateCurrentUser(@RequestBody User user) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = getAuthentication();
         String username = authentication.getName();
 
         Optional<User> userOptional = userService.findByUsername(username);

@@ -206,6 +206,9 @@ System implementuje kompletną kontrolę dostępu opartą na rolach (RBAC):
 - JWT (JSON Web Token) do uwierzytelniania użytkowników
 - BCrypt do szyfrowania haseł użytkowników
 
+  <img width="384" alt="image" src="https://github.com/user-attachments/assets/f0d28753-db1c-4f7a-b434-53a65d2a9cab" />
+
+
 ### Role użytkowników
 
 - **USER** - Standardowy użytkownik
@@ -220,17 +223,20 @@ W projekcie zaimplementowano poplimorfizm:
 
 ### Service Pattern 
 Przykład warstwy serwisowej, która kapsułkuje logikę biznesową dotyczącą biletów
-![Uploading image.png…]()
+<img width="733" alt="image" src="https://github.com/user-attachments/assets/f4058597-bec1-4ae5-b2ac-239663231f1d" />
+
 
 ### MVC Pattern - architektura aplikacji
 Aplikacja oparta na Spring Boot domyślnie stosuje wzorzec Model-View-Controller. Przykładowe warstwy:
-	- Model: klasy Ticket, Match, Stadium,
-	- View: Swagger UI
-	-	Controller: klasy kontrolerów REST (np. TicketController),
-	-	Service: TicketServiceImpl.
+- Model: klasy Ticket, Match, Stadium,
+- View: Swagger UI
+- Controller: klasy kontrolerów REST (np. TicketController),
+- Service: TicketServiceImpl.
 
 ### Repository Pattern 
 Wszystkie repozytoria implementują interfejsy (np. TicketRepository), które rozszerzają JpaRepository zapewniając operacje CRUD:
+<img width="733" alt="image" src="https://github.com/user-attachments/assets/a5a2dc76-9264-43cf-a509-e651b6e09004" />
+
 
 ## Uruchamianie projektu
 
@@ -303,129 +309,13 @@ mvn clean test jacoco:report
 
 
 ## Przykładowe działanie systemu
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/7330aa11-9aab-4dd3-9a22-fb72e8fec7bb" />
 
-### 1. Uwierzytelnianie użytkownika
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/52df2728-1430-49e4-ad4d-9bce15726de5" />
 
-```
-POST /api/auth/login
-```
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/88ccac31-03f8-4606-83d3-d7b360de956f" />
 
-Request body:
-```json
-{
-  "username": "admin",
-  "password": "admin"
-}
-```
 
-Response:
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiJ9...",
-  "type": "Bearer",
-  "id": 1,
-  "username": "admin",
-  "email": "admin@example.com",
-  "roles": ["ROLE_USER", "ROLE_ADMIN"]
-}
-```
 
-### 2. Przeglądanie dostępnych stadionów
 
-```
-GET /api/stadiums
-```
-
-Response:
-```json
-[
-  {
-    "id": 1,
-    "name": "National Stadium",
-    "city": "Warsaw",
-    "capacity": 58000
-  },
-  {
-    "id": 2,
-    "name": "Wembley Stadium",
-    "city": "London",
-    "capacity": 90000
-  },
-  {
-    "id": 3,
-    "name": "Camp Nou",
-    "city": "Barcelona",
-    "capacity": 99000
-  }
-]
-```
-
-### 3. Przeglądanie meczów
-
-```
-GET /api/matches
-```
-
-Response:
-```json
-[
-  {
-    "id": 1,
-    "homeTeam": "Poland",
-    "awayTeam": "Germany",
-    "matchDate": "2023-06-15T18:00:00",
-    "stadium": {
-      "id": 1,
-      "name": "National Stadium",
-      "city": "Warsaw",
-      "capacity": 58000
-    }
-  },
-  {
-    "id": 2,
-    "homeTeam": "England",
-    "awayTeam": "France",
-    "matchDate": "2023-06-20T20:00:00",
-    "stadium": {
-      "id": 2,
-      "name": "Wembley Stadium",
-      "city": "London",
-      "capacity": 90000
-    }
-  }
-]
-```
-
-### 4. Zakup biletu
-
-```
-POST /api/tickets
-```
-
-Request body:
-```json
-{
-  "matchId": 1,
-  "seatRow": "A",
-  "seatNumber": "1",
-  "price": 100.00,
-  "status": "RESERVED"
-}
-```
-
-Response:
-```json
-{
-  "id": 1,
-  "match": {
-    "id": 1,
-    "homeTeam": "Poland",
-    "awayTeam": "Germany",
-    "matchDate": "2023-06-15T18:00:00"
-  },
-  "seatRow": "A",
-  "seatNumber": "1",
-  "price": 100.00,
-  "status": "RESERVED"
-}
 

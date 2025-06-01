@@ -1,22 +1,9 @@
 # Aplikacja Zarządzania Biletami Stadionowymi
 
-## Spis treści
-1. [Temat](#temat)
-2. [Opis](#opis)
-3. [Realizowane systemy](#realizowane-systemy)
-4. [Struktura Projektu](#struktura-projektu)
-5. [Diagram ERD](#diagram-erd)
-6. [Tabele bazodanowe](#tabele-bazodanowe)
-7. [Pakiety główne](#pakiety-główne)
-8. [Kontrolery REST API](#kontrolery-rest-api)
-9. [Autoryzacja i bezpieczeństwo](#autoryzacja-i-bezpieczeństwo)
-10. [Uruchamianie projektu](#uruchamianie-projektu)
-11. [Testowanie](#testowanie)
-12. [Przykładowe działanie systemu](#przykładowe-działanie-systemu)
-
 ## Temat
 
 Zarządzanie biletami stadionowymi - aplikacja do rezerwacji biletów na mecze oraz zarządzania stadionami i meczami
+
 
 ## Opis
 
@@ -34,6 +21,7 @@ Aplikacja do zarządzania biletami stadionowymi, meczami oraz stadionami. System
 
 - **USER**: Przeglądanie dostępnych meczów, zakup biletów, zarządzanie własnymi danymi
 - **ADMIN**: Wszystkie funkcjonalności użytkownika rozszerzone o zarządzanie stadionami, meczami, użytkownikami oraz biletami w systemie
+  
 
 ### 3. System zarządzania meczami
 
@@ -48,6 +36,7 @@ Aplikacja do zarządzania biletami stadionowymi, meczami oraz stadionami. System
 - Zakup biletów na wybrane mecze
 - Anulowanie zakupionych biletów
 - Zarządzanie statusami biletów (FREE, RESERVED, SOLD)
+
 
 ### 5. System autoryzacji i bezpieczeństwa
 
@@ -117,50 +106,9 @@ src/
 
 ## Tabele bazodanowe
 
-Aplikacja wykorzystuje PostgreSQL z następującymi tabelami:
+Aplikacja wykorzystuje PostgreSQL z następującymi tabelami (Diagram ERD):
 
-### 1. users - Informacje o użytkownikach systemu
-
-- id: SERIAL PRIMARY KEY
-- username: VARCHAR(50) NOT NULL UNIQUE
-- password: VARCHAR(100) NOT NULL
-- email: VARCHAR(100) NOT NULL UNIQUE
-- created_at: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-
-### 2. roles - Role użytkowników
-
-- id: SERIAL PRIMARY KEY
-- name: VARCHAR(20) NOT NULL UNIQUE
-
-### 3. user_roles - Tabela łącząca użytkowników z rolami
-
-- user_id: INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
-- role_id: INT NOT NULL REFERENCES roles(id) ON DELETE CASCADE
-- PRIMARY KEY (user_id, role_id)
-
-### 4. stadium - Stadiony
-
-- id: SERIAL PRIMARY KEY
-- name: VARCHAR(100) NOT NULL
-- city: VARCHAR(100) NOT NULL
-- capacity: INT NOT NULL
-
-### 5. match - Mecze
-
-- id: SERIAL PRIMARY KEY
-- home_team: VARCHAR(100) NOT NULL
-- away_team: VARCHAR(100) NOT NULL
-- match_date: TIMESTAMP NOT NULL
-- stadium_id: INT NOT NULL REFERENCES stadium(id) ON DELETE RESTRICT
-
-### 6. ticket - Bilety
-
-- id: SERIAL PRIMARY KEY
-- match_id: INT NOT NULL REFERENCES match(id) ON DELETE CASCADE
-- seat_row: VARCHAR(5)
-- seat_number: VARCHAR(5)
-- price: NUMERIC(8,2) NOT NULL
-- status: VARCHAR(10) NOT NULL DEFAULT 'FREE'
+<img width="369" alt="image" src="https://github.com/user-attachments/assets/d18b5cb5-3955-4b17-b63c-46dafd0aaa5d" />
 
 ## Pakiety główne
 
@@ -263,6 +211,27 @@ System implementuje kompletną kontrolę dostępu opartą na rolach (RBAC):
 - **USER** - Standardowy użytkownik
 - **ADMIN** - Administrator systemu
 
+## Polimorfizm
+
+W projekcie zaimplementowano poplimorfizm:
+<img width="717" alt="image" src="https://github.com/user-attachments/assets/6a3c0f3d-a40c-4256-9c29-e71c871a2855" />
+
+## Wzorce projektowe
+
+### Service Pattern 
+Przykład warstwy serwisowej, która kapsułkuje logikę biznesową dotyczącą biletów
+![Uploading image.png…]()
+
+### MVC Pattern - architektura aplikacji
+Aplikacja oparta na Spring Boot domyślnie stosuje wzorzec Model-View-Controller. Przykładowe warstwy:
+	- Model: klasy Ticket, Match, Stadium,
+	- View: Swagger UI
+	-	Controller: klasy kontrolerów REST (np. TicketController),
+	-	Service: TicketServiceImpl.
+
+### Repository Pattern 
+Wszystkie repozytoria implementują interfejsy (np. TicketRepository), które rozszerzają JpaRepository zapewniając operacje CRUD:
+
 ## Uruchamianie projektu
 
 ### Wymagania systemowe
@@ -316,14 +285,22 @@ Aplikacja automatycznie tworzy:
 
 ## Testowanie
 
-Projekt zawiera zestaw testów zapewniających poprawne działanie aplikacji.
+Projekt zawiera zestaw testów zapewniających poprawne działanie aplikacji. Pokrycie spełnia wymagania projektowe
+<img width="1155" alt="image" src="https://github.com/user-attachments/assets/d92bf494-6461-4e66-b346-1c1d19e88462" />
+
 
 ### Uruchomienie testów
 
-```bash
 # Wszystkie testy
 mvn clean test
-```
+
+# Raport pokrycia JaCoCo
+mvn clean test jacoco:report
+
+### Przykładowy test
+<img width="648" alt="image" src="https://github.com/user-attachments/assets/62585a1c-2f41-46a0-a69d-dfb23a982f21" />
+
+
 
 ## Przykładowe działanie systemu
 
@@ -451,4 +428,4 @@ Response:
   "price": 100.00,
   "status": "RESERVED"
 }
-```
+

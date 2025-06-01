@@ -36,14 +36,15 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
+                // Public endpoints
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/tickets/**").permitAll()
                 .requestMatchers("/api/stadiums/**").permitAll()
-                // Remove redundant admin role check since we're using @PreAuthorize in the controller
-                // .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                // Specific endpoints for users
                 .requestMatchers("/api/tickets/**").hasAnyRole("USER", "ADMIN")
-                .requestMatchers("/api/**").hasAnyRole("USER", "ADMIN")
+                // All other endpoints require ADMIN role
+                .requestMatchers("/api/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             );
 

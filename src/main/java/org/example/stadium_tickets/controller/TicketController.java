@@ -94,7 +94,7 @@ public class TicketController {
 
 
 
-    @PostMapping
+    @PostMapping(consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(
         summary = "Purchase a ticket", 
         description = "Purchases a new ticket for a match"

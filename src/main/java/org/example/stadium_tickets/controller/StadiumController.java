@@ -59,7 +59,7 @@ public class StadiumController {
         return ResponseEntity.ok(stadiumService.getStadiumById(id));
     }
 
-    @PostMapping
+    @PostMapping    
     @Operation(
         summary = "Create a new stadium", 
         description = "Creates a new stadium with the provided details"
@@ -70,7 +70,7 @@ public class StadiumController {
         return ResponseEntity.ok(stadiumService.createStadium(stadium));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(path = "/{id}", consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(
         summary = "Update a stadium", 
         description = "Updates an existing stadium with the provided details"

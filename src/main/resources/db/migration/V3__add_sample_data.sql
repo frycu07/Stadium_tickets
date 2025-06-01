@@ -1,6 +1,6 @@
 -- Insert sample users (admin password is 'admin', user password is 'user' encoded with BCrypt)
 INSERT INTO users (username, password, email, created_at) VALUES
-('admin', '$2a$10$2q52UTpSyX/oAnRm9y4Yp.vs8F6yaSpaQMAWJrxyiYcG2nNHx1fIK', 'admin@example.com', CURRENT_TIMESTAMP),
+('admin', '$2a$10$hvAk6fgcdI6XDfUBl7h6dO01qzZQ2v9S98N5cohpoK9N6MC8Qrp/6', 'admin@example.com', CURRENT_TIMESTAMP),
 ('user', '$2a$10$2q52UTpSyX/oAnRm9y4Yp.vs8F6yaSpaQMAWJrxyiYcG2nNHx1fIK', 'user@example.com', CURRENT_TIMESTAMP);
 
 -- Assign roles to users

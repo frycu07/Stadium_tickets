@@ -77,7 +77,7 @@ public class UserController {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
-    @PostMapping
+    @PostMapping(consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(
         summary = "Create a new user", 
         description = "Creates a new user with the provided details"
@@ -92,7 +92,7 @@ public class UserController {
         return ResponseEntity.ok(userService.createUser(user));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(path = "/{id}", consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(
         summary = "Update a user", 
         description = "Updates an existing user with the provided details",
@@ -140,7 +140,7 @@ public class UserController {
         }
     }
 
-    @PutMapping("/me")
+    @PutMapping(path = "/me", consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(
         summary = "Update current user", 
         description = "Updates the currently authenticated user's information",

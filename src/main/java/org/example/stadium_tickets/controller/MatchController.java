@@ -37,7 +37,7 @@ public class MatchController {
         return ResponseEntity.ok(matchService.getMatchById(id));
     }
 
-    @PostMapping
+    @PostMapping(consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(summary = "Create a new match", description = "Creates a new football match")
     public ResponseEntity<Match> createMatch(
             @Parameter(description = "Match details", required = true)
@@ -45,7 +45,7 @@ public class MatchController {
         return ResponseEntity.ok(matchService.createMatch(match));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(path = "/{id}", consumes = {"application/json", "application/json;charset=UTF-8"})
     @Operation(summary = "Update a match", description = "Updates an existing football match")
     public ResponseEntity<Match> updateMatch(
             @Parameter(description = "ID of the match to update", required = true)

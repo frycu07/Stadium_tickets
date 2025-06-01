@@ -55,7 +55,7 @@ public class AuthController {
             content = @Content(schema = @Schema(implementation = JwtResponse.class))),
         @ApiResponse(responseCode = "401", description = "Invalid username or password")
     })
-    @PostMapping("/login")
+    @PostMapping(path = "/login", consumes = {"application/json", "application/json;charset=UTF-8"})
     public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
         try {
             Authentication authentication = authenticationManager.authenticate(
@@ -85,7 +85,7 @@ public class AuthController {
         }
     }
 
-    @PostMapping("/register")
+    @PostMapping(path = "/register", consumes = {"application/json", "application/json;charset=UTF-8"})
     public ResponseEntity<?> registerUser(@RequestBody User user) {
         try {
             // Create user with default USER role
@@ -102,7 +102,7 @@ public class AuthController {
         }
     }
 
-    @PostMapping("/register/admin")
+    @PostMapping(path = "/register/admin", consumes = {"application/json", "application/json;charset=UTF-8"})
     public ResponseEntity<?> registerAdmin(@RequestBody User user) {
         try {
             // Create user with default USER role
@@ -132,7 +132,7 @@ public class AuthController {
             content = @Content(schema = @Schema(implementation = JwtResponse.class))),
         @ApiResponse(responseCode = "401", description = "Invalid username")
     })
-    @PostMapping("/login/passwordless")
+    @PostMapping(path = "/login/passwordless", consumes = {"application/json", "application/json;charset=UTF-8"})
     public ResponseEntity<?> authenticateUserPasswordless(@RequestBody PasswordlessLoginRequest loginRequest) {
         try {
             // Find user by username

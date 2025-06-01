@@ -23,10 +23,13 @@ public class Stadium {
     @Column(name = "capacity", nullable = false)
     private Integer capacity;
 
-    @OneToMany(mappedBy = "stadium", cascade = CascadeType.ALL)
-    @JsonBackReference
-    private List<Match> matches = new ArrayList<>();
+    //@OneToMany(mappedBy = "stadium", cascade = CascadeType.ALL)
+    //@JsonBackReference
+    //private List<Match> matches = new ArrayList<>();
 
+    @OneToMany(mappedBy = "stadium", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Match> matches = new ArrayList<>();
     // Default constructor
     public Stadium() {
     }

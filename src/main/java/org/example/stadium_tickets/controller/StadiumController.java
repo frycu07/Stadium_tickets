@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import org.example.stadium_tickets.entity.Stadium;
 import org.example.stadium_tickets.service.StadiumService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,7 +60,7 @@ public class StadiumController {
         return ResponseEntity.ok(stadiumService.getStadiumById(id));
     }
 
-    @PostMapping    
+    @PostMapping
     @Operation(
         summary = "Create a new stadium", 
         description = "Creates a new stadium with the provided details"
@@ -70,7 +71,10 @@ public class StadiumController {
         return ResponseEntity.ok(stadiumService.createStadium(stadium));
     }
 
-    @PutMapping(path = "/{id}", consumes = {"application/json", "application/json;charset=UTF-8"})
+    @PutMapping(
+    consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
     @Operation(
         summary = "Update a stadium", 
         description = "Updates an existing stadium with the provided details"
